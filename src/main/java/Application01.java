@@ -13,6 +13,7 @@ public class Application01 {
         String city = s.nextLine();
 
         System.out.printf("Hello from %s!", city);
+        System.out.println("vcb" + '2' +"sdn");
     }
 
 }
