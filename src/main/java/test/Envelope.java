@@ -1,3 +1,4 @@
+package test;
 
 public class Envelope {
     public static void main(String[] args) {
