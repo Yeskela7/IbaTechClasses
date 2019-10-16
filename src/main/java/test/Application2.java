@@ -7,26 +7,24 @@ import java.util.Scanner;
 public class Application2 {
     public static void main(String[] args) {
 
-        int[] array = new int[10];
-        System.out.println(array[1]);
-        for (int i = 1; i < array.length; i++) {
-            array[i] = i-10;
+        for (int i = 0; i < 10; i++) {
+            while (true) {
+                if (i < 5) break;
+            }
 
-            System.out.println(array[i]);
-
-        }
-        System.out.println(Arrays.toString((array)));
-
+            System.out.println("after while");
         }
 
-
-
-
-
-
-
+        System.out.println("after for");
 
     }
+}
+
+
+
+
+
+
 
 
 

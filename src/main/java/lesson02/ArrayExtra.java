@@ -17,10 +17,10 @@ public class ArrayExtra {
     }
 
     public static void main(String[] args) {
-        int[] a = {1,2,3};
-
+        String str = "You are the best Java developer ever";
+        String substring = str.substring(1, 5);
+        System.out.println(substring);
         // passing named array
-        print(a);
         // passing unnamed (anonymous) array
         print(new int[]{4,5,6});
 
