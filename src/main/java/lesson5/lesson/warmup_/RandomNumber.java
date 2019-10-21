@@ -11,12 +11,16 @@ public class RandomNumber {
 
         for(int i = 0; i < numberArray.length;  i++){
 
-            int randomNumber = rnd.nextInt(6);
+            int randomNumber = rnd.nextInt(10);
             numberArray[i] = randomNumber;
             if(numberArray[i] % 2 == 0){
-                System.out.printf("number = %d, fizz \n", numberArray[i]);
+                if(numberArray[i] % 3 == 0) {
+                    System.out.printf("number = %d, fizzbuzz \n", numberArray[i]);
+                }else {
+                    System.out.printf("number = %d, fizz \n", numberArray[i]);
+                }
             }else if(numberArray[i] % 3 == 0){
-                System.out.printf("number = %d, bizz \n", numberArray[i]);
+                System.out.printf("number = %d, buzz \n", numberArray[i]);
             }
         }
 
