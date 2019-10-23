@@ -17,7 +17,6 @@ public class Arrays {
             list.add(rnd);
         }
         list.forEach(item -> { if (item % 2 == 0) evenNumber.add(item); else {oddNumber.add(item);} });
-//        list.forEach(item -> { if (item % 2 == 1) oddNumber.add(item); });
 
         System.out.println(list);
         System.out.println(evenNumber);
