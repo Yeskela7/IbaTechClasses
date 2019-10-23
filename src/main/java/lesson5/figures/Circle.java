@@ -3,8 +3,8 @@
 //public class Circle extends Figure {
 //
 //    private Point firstPoint;
-//    private int radiusL;
-//
+////    private int radiusL
+
 //    public Circle() {
 //    }
 //
