@@ -7,22 +7,17 @@ public class Arrays {
     public static void main(String[] args) {
 
         Random random = new Random();
-        ArrayList<Integer> list = new ArrayList();
+        ArrayList<Integer> list = new ArrayList<>();
 
-        ArrayList evenNumber = new ArrayList();
-        ArrayList oddNumber = new ArrayList();
+        ArrayList<Integer> evenNumber = new ArrayList<>();
+        ArrayList<Integer> oddNumber = new ArrayList<>();
 
         for (int i = 0; i < 100; i++) {
             int rnd = random.nextInt(100);
             list.add(rnd);
         }
-        list.forEach(item -> {
-            if (item % 2 == 0) evenNumber.add(item);
-        });
-        list.forEach(item -> {
-            if (item % 2 == 1) oddNumber.add(item);
-        });
-
+        list.forEach(item -> { if (item % 2 == 0) evenNumber.add(item); else {oddNumber.add(item);} });
+//        list.forEach(item -> { if (item % 2 == 1) oddNumber.add(item); });
 
         System.out.println(list);
         System.out.println(evenNumber);
