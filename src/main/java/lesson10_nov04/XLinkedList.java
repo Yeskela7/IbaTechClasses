@@ -51,6 +51,11 @@ public class XLinkedList {
   public void delete(int value){
     XItem cur = head;
     XItem xItem;
+    
+//     XItem prev = cur;
+//     prev.next = cur.next;
+//     cur = null;
+    
     xItem = cur.next.next;
     while(cur != null){
       if(cur.next.value == value) {
