@@ -1,5 +1,6 @@
 package lesson10_nov04;
 
+import javax.transaction.xa.Xid;
 import java.util.StringJoiner;
 
 public class XLinkedList {
@@ -11,6 +12,23 @@ public class XLinkedList {
     public XItem(int value) {
       this.value = value;
     }
+  }
+
+
+  public int length(){
+    int length = 0;
+    XItem item = head;
+    while (item != null){
+      item = item.next;
+      length++;
+    }
+    return length;
+  }
+
+  public int len(){
+    if(head == null) return 0;
+    head = head.next;
+    return len()+1;
   }
 
   private XItem head;
@@ -48,19 +66,23 @@ public class XLinkedList {
     return sj.toString();
   }
 
+  public void rev(){
+    XItem cur = head;
+    XItem temp = cur.next;
+    while (cur.next != null){
+
+      cur = cur.next;
+
+    }
+    head = temp;
+  }
+
   public void delete(int value){
     XItem cur = head;
-    XItem xItem;
-    
-//     XItem prev = cur;
-//     prev.next = cur.next;
-//     cur = null;
-    
-    xItem = cur.next.next;
-    while(cur != null){
+    while(cur.next != null){
       if(cur.next.value == value) {
-        cur.next = xItem;
-      }else {
+        cur.next = cur.next.next;
+      }else{
         cur = cur.next;
       }
     }
